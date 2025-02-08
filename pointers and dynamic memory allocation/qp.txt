@@ -1,0 +1,46 @@
+Pointers and Dynamic Memory Allocation
+
+Task-1
+
+1. Program to allocate memory at runtime for an array containing "welcome" and add '4' to the characters at even numbered location.
+
+2. Program to allocate memory for 10 integers and reallocate the same memory for 15 integers and store some integer data(may be positive or negative) and find the odd numbers and its position or index. 
+
+3. Manipulate an array using pointers, where find out count of the prime numbers and its position stored in that array.
+
+4. Write a C program to create a Stack along with writing a code to create, insert, delete, search, traverse and display all the nodes.
+
+Task 2
+
+1. Program to compare two strings using pointers.
+
+2. C program to search element in array using pointers.
+
+3. Access two dimensional arrays using pointers in C.
+
+Task 3
+
+1. Program to sum of two numbers using pointers.
+
+2. Program to find the maximum of two numbers using function pointers.
+
+3. Swap two numbers using function pointers.
+
+4. C program to input and print array elements using pointers.
+
+5. To search an element in array using function pointers.
+
+6. To find the length of string using function pointers.
+
+7. To copy one string to another using pointers.
+
+8. To concatenate two strings using pointers.
+
+9. To compare two strings using pointers.
+
+10. Write a program in C to print all permutations of a given string using pointers.
+
+11. Write a program in C to show the usage of pointer to the structure.
+
+12. Write a program in C to use a pointer to the union data type.
+

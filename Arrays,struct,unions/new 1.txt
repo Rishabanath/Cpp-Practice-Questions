@@ -1,0 +1,560 @@
+#include <stdio.h>
+
+int main()
+{
+    int treeArr[40],l=1,r=1,arr[10],size,j;
+    // arr=-1;
+    for(int i=0;i<10;i++)
+    {treeArr[i]=-1;
+    // printf("%d",arr[i]);
+    }
+    printf("enter size of array:");
+    scanf("%d",&size);
+    printf("enter array:");
+    for(int i=0;i<size;i++)
+    scanf("%d",&arr[i]);
+    // for(int i=0;i<10;i++)
+    // printf("%d ",arr[i]);
+    treeArr[0]=arr[0];
+    j=0;
+    for(int i=1;i<10;i++)
+    {
+        if(arr[i]>arr[j])
+        {
+            treeArr[2l+1]=arr[i];
+            j=i;
+            l++;
+        }
+        // else
+        // {
+        //     treeArr[2r]=arr[i];
+        //     r++;
+        // }
+    }
+    for(int i=0;i<(sizeof(treeArr)/sizeof(treeArr[0]));i++)
+    printf("%d ",treeArr[i]);
+    
+    return 0;
+} 
+
+
+#include<stdio.h>
+
+int main() {
+    int bst[20],arr[10];
+    int size,l=1,r=1;
+    printf("Enter array size: ");
+    scanf("%d",&size);
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&arr[i]);
+        if(i==0)
+        bst[1]=arr[0];
+        else{
+        if(arr[i]>arr[0])
+        {
+            for(int j=1;j<=r;j++)
+            if(arr)
+            bst[(2*r)+1]=arr[i];
+            r++;
+        }
+        else if(a)
+        {
+           bst[2*l]=arr[i];
+           l++;
+        }
+    }
+    }
+    for(int i=1;i<size+1;i++)
+    {
+        printf("%d",bst[i]);
+    }
+    return 0;
+}
+
+
+#include<stdio.h>
+
+void checkr(int a,int bst[],int r);
+
+int main() {
+    int bst[20],arr[10];
+    bst[0]=-1;
+    int size,r=1;
+    printf("Enter array size: ");
+    scanf("%d",&size);
+    printf("Enter array: \n");
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("bst: ");
+    for(int i=0;i<size;i++)
+    {
+        printf("%d ",bst[i]);
+    }
+    for(int i=0;i<size;i++)
+    {
+        r=1;
+        if(i==0)
+        bst[1]=arr[0];
+        else{
+        if(arr[i]>bst[1])
+        {
+            r=(r*2)+1;
+            checkr(arr[i],bst,r);
+        }
+        else
+        {
+           checkr(arr[i],bst,r);
+        }
+    }
+    }
+    for(int i=0;i<r;i++)
+    printf("%d ",bst[i]);
+    
+    return 0;
+}
+
+void checkr(int a,int bst[],int r)
+{
+    if(bst[r]!=-1)
+    {
+        if(bst[r]<a)
+        {
+            r=(r*2)+1;
+            checkr(a,bst,r);
+        }
+        else
+        {
+            r=r*2;
+            checkr(a,bst,r);
+        }
+    }
+    else
+    bst[r]=a;
+}
+
+
+
+#include <stdio.h>
+
+struct Date {
+    int date,month,year;
+};
+
+int main()
+{
+    struct Date d1,d2,d3;
+    int days=0;
+    printf("Enter Date1 in format DD MM YYYY: ");
+    scanf("%d %d %d",&d1.date,&d1.month,&d1.year);
+    printf("Enter Date2 in format DD MM YYYY: ");
+    scanf("%d %d %d",&d2.date,&d2.month,&d2.year);
+    int year1=(d1.year>d2.year)?d1.year:d2.year;
+    int year2=(d1.year<d2.year)?d1.year:d2.year;
+    // int count=0;
+    // for(int year=year1+1;year<year2;year++)
+    // {
+    //     if((year%4)==0)
+    // {
+    //     if((year%100)==0)
+    //     {
+    //         if((year%400)==0)
+    //         count++;
+    //     }
+    //     else
+    //     count++;
+    // }
+    // }
+    // days=count*366;
+    // days=days+((year1+1-year2)-count)*365;
+    // if(months)
+    
+    return 0;
+}
+
+
+
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+static int count=0;
+struct Books
+{
+    int bkdate,serial;
+    char bkname[10],auth[10];
+};
+
+ void addBook();
+ void searchBooks();
+ void viewBooks();
+ void deleteBooks();
+
+void menu()
+{
+    int choice = 0;
+    do
+    {
+        printf("\n1.Add Books\n2.Search Books\n3.View Books\n4.Delete Book\n5.Exit\nEnter choice: ");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+        case 1:
+            addBook();
+            break;
+        case 2:
+            searchBooks();
+            break;
+        case 3:
+            viewBooks();
+            break;
+        case 4:
+            deleteBooks();
+            break;
+        case 5:
+            printf("\nThank you!!!\n");
+            break;
+        default:
+            printf("\nINVALID INPUT!!! Try again...");
+        }                                          
+    }
+    while(choice!=5);                                    
+}
+
+void addBook()
+{
+    struct Books b[];
+    printf("Enter book details: ");
+    printf("Book name: ");
+    scanf("%s",&b[count].bkname);
+    printf("Book date: ");
+    scanf("%s",&b[count].bkdate);
+    printf("Book serial number: ");
+    scanf("%s",&b[count].serial);
+    printf("Book author: ");
+    scanf("%s",&b[count].auth);
+    printf("Book added: ");
+    count=count+1;
+}
+
+void searchBooks()
+{
+    struct Books b[];
+    char name[10];
+    int f;
+    printf("Book name: ");
+    scanf("%s"&name);
+    for(int i=0;i<count;i++)
+    {
+        if(name==b[i].bkname)
+        {f=i;
+        break;}
+    }
+    printf("\nAvailable\nBook details: ");
+    printf("\nBook name: %s",b[f].bkname);
+    printf("\nBook date: %d",,b[f].bkdate);
+    printf("\nBook serial number: %d",b[f].serial);
+    printf("\nBook author: %s",b[f].auth);
+}
+
+void viewBooks()
+{
+    struct Books b[];
+    for(int i=0;i<count;i++)
+    {
+        printf("\nBook details: ");
+        printf("\nBook name: %s",b[i].bkname);
+        printf("\nBook date: %d",,b[i].bkdate);
+        printf("\nBook serial number: %d",b[i].serial);
+        printf("\nBook author: %s",b[i].auth);
+    }
+}
+
+void deleteBooks()
+{
+    struct Books b[];
+    char name[10];
+    int f;
+    printf("Book name: ");
+    scanf("%s"&name);
+    for(int i=0;i<count;i++)
+    {
+        if(name==b[i].bkname)
+        {f=i;
+        break;}
+    }
+    b[i].bkname='';
+    b[i].bkdate=0;
+    b[i].serial=0;
+    b[i].auth='';
+    printf("Book deleted ");
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+#define MAX 20
+char finalstk[20];
+
+char stk[20];
+int top = -1;
+
+int isEmpty(){
+    return top == -1;
+}
+int isFull(){
+    return top == MAX - 1;
+}
+
+char peek(){
+    return stk[top];
+}
+
+char pop(){
+    if(isEmpty())
+        return -1;
+
+    char ch = stk[top];
+    top--;
+    return(ch);
+}
+
+void push(char oper){
+    if(isFull())
+        printf("Stack Full!!!!");
+   
+    else{
+        top++;
+        stk[top] = oper;
+    }
+}
+
+int Op(char ch) 
+{ 
+    return (ch >= '0' && ch <= '9'); 
+} 
+
+int priority(char ch) 
+{ 
+    switch (ch) 
+    { 
+    case '+': return 1; 
+    case '-': return 1; 
+    case '*': return 2;
+    case '/': return 2; 
+    case '^': return 3; 
+    } 
+    return -1; 
+} 
+
+int InFixtoPostfix(char* expr) 
+{ 
+    int i, j;
+
+    for (i = 0, j = -1; expr[i]; ++i) 
+    { 
+        if (Op(expr[i])) 
+            expr[++j] = expr[i]; 
+
+        else if (expr[i] == '(') 
+            push(expr[i]); 
+        else if (expr[i] == ')') 
+        { 
+            while (!isEmpty() && peek() != '(') 
+                expr[++j] = pop(); 
+            if (!isEmpty() && peek() != '(') 
+                return -1;              
+            else
+                pop(); 
+        }
+        else 
+        { 
+            while (!isEmpty() && priority(expr[i]) <= priority(peek())) 
+                expr[++j] = pop(); 
+            push(expr[i]); 
+        } 
+
+    } 
+
+    while (!isEmpty()) 
+        expr[++j] = pop(); 
+
+    expr[++j] = '\0'; 
+    printf( "%s", expr);
+    // strcpy(finalstk,expr); 
+} 
+
+int main()
+{
+char expr[] = "((5+(6*7))-8)"; 
+    InFixtoPostfix(expr); 
+    // printf( "\n%s", expr);
+    for(int i=0;i<(sizeof(expr)/sizeof(expr[0]));i++)
+    {
+        int flag=0;
+        if(expr[i]=='/'||expr[i]=='*'||expr[i]=='+'||expr[i]=='-')
+        {
+            if(expr[i]=='/')
+            expr[i-2]=expr[i-2]/expr[i-1];
+            if(expr[i]=='*')
+            expr[i-2]=expr[i-2]*expr[i-1];
+            if(expr[i-2]=='+')
+            expr[i-2]=expr[i-2]+expr[i-1];
+            if(expr[i]=='-')
+            expr[i-2]=expr[i-2]-expr[i-1];
+            flag=1;
+        }
+        if(flag==1)
+        {
+            for(int j=i-1;j<(sizeof(expr)/sizeof(expr[0]))-2;j++)
+            {
+                expr[j]=expr[j+2];
+            }
+        }
+        printf( "\n int: %s", expr);
+    }
+    printf("\n%s",expr);
+    return 0; 
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+#define MAX 20
+char finalstk[20];
+
+char stk[20];
+int top = -1;
+
+int isEmpty(){
+    return top == -1;
+}
+int isFull(){
+    return top == MAX - 1;
+}
+
+char peek(){
+    return stk[top];
+}
+
+char pop(){
+    if(isEmpty())
+        return -1;
+
+    char ch = stk[top];
+    top--;
+    return(ch);
+}
+
+void push(char oper){
+    if(isFull())
+        printf("Stack Full!!!!");
+   
+    else{
+        top++;
+        stk[top] = oper;
+    }
+}
+
+int Op(char ch) 
+{ 
+    return (ch >= '0' && ch <= '9'); 
+} 
+
+int priority(char ch) 
+{ 
+    switch (ch) 
+    { 
+    case '+': return 1; 
+    case '-': return 1; 
+    case '*': return 2;
+    case '/': return 2; 
+    case '^': return 3; 
+    } 
+    return -1; 
+} 
+
+int InFixtoPostfix(char* expr) 
+{ 
+    int i, j;
+
+    for (i = 0, j = -1; expr[i]; ++i) 
+    { 
+        if (Op(expr[i])) 
+            expr[++j] = expr[i]; 
+
+        else if (expr[i] == '(') 
+            push(expr[i]); 
+        else if (expr[i] == ')') 
+        { 
+            while (!isEmpty() && peek() != '(') 
+                expr[++j] = pop(); 
+            if (!isEmpty() && peek() != '(') 
+                return -1;              
+            else
+                pop(); 
+        }
+        else 
+        { 
+            while (!isEmpty() && priority(expr[i]) <= priority(peek())) 
+                expr[++j] = pop(); 
+            push(expr[i]); 
+        } 
+
+    } 
+
+    while (!isEmpty()) 
+        expr[++j] = pop(); 
+
+    expr[++j] = '\0'; 
+    printf( "%s", expr);
+    // strcpy(finalstk,expr); 
+} 
+
+int main()
+{
+char expr[] = "((5+(6*7))-8)"; 
+    InFixtoPostfix(expr); 
+    // printf( "\n%s", expr);
+    int i=0,size=sizeof(expr)/sizeof(expr[0]);
+    while(i<size)
+    {
+        // int i=0;
+        int flag=0;
+        if(expr[i]=='/'||expr[i]=='*'||expr[i]=='+'||expr[i]=='-')
+        {
+            if(expr[i]=='/')
+            expr[i-2]=((expr[i-2]-48)/(expr[i-1]-48));
+            if(expr[i]=='*')
+            expr[i-2]=((expr[i-2]-48)*(expr[i-1]-48));
+            if(expr[i-2]=='+')
+            expr[i-2]=((expr[i-2]-48)+(expr[i-1]-48));
+            if(expr[i]=='-')
+            expr[i-2]=((expr[i-2]-48)-(expr[i-1]-48));
+            flag=1;
+            // i=0;
+        }
+        if(flag==1)
+        {
+            
+            for(int j=i-1;j<size-2;j++)
+            {
+                expr[j]=expr[j+2];
+            }
+            size=size-2;
+            i=0;
+        }
+        printf( "\n int: %s", expr);
+        i++;
+    }
+    printf("\n%s",expr);
+    return 0; 
+}
