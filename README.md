@@ -1,4 +1,4 @@
-This repository contains a collection of C++ practice problems I worked on to enhance my programming skills. The problems cover various concepts, including:
+This repository contains a collection of C practice problems I worked on to enhance my programming skills. The problems cover various concepts, including:
 
 ✅ Basic Syntax & Data Types
 ✅ Loops & Conditional Statements
@@ -11,15 +11,15 @@ This repository contains a collection of C++ practice problems I worked on to en
 How to Use 🛠
 
 -Clone the repository:
-  Copy code: git clone https://github.com/Rishabanath/Cpp-Practice-Questions.git
+  Copy code: git clone https://github.com/Rishabanath/C-Practice-Questions.git
 -Navigate to the desired directory:
-  Copy code: cd Cpp-Practice-Questions/Main
--Compile and run any C++ file:
-  Copy code: g++ filename.cpp -o output && ./output
+  Copy code: cd C-Practice-Questions/Main
+-Compile and run any C file:
+  Copy code: g++ filename.c -o output && ./output
   
 Why This Repository?
 I created this repository to:
-✔️ Keep track of my C++ learning progress.
+✔️ Keep track of my C learning progress.
 ✔️ Share useful problem sets for others to practice.
 ✔️ Improve coding efficiency and problem-solving skills.
 
